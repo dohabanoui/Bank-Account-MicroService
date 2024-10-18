@@ -9,10 +9,6 @@ Ce projet est un microservice développé avec Spring Boot permettant de gérer 
 - [Utilisation](#utilisation)
 - [Endpoints de l'API](#endpoints-de-lapi)
 - [Utilisation de GraphQL](#utilisation-de-graphql)
-- [Tests](#tests)
-- [Captures d'Écran](#captures-décran)
-- [Remarques](#remarques)
-- [Licence](#licence)
 
 ## Fonctionnalités
 - Services web RESTful pour la gestion des comptes bancaires.
@@ -48,4 +44,42 @@ Utilisez [start.spring.io](https://start.spring.io/) pour générer votre projet
 Lancez l'application et accédez à la console H2 via l'URL : `http://localhost:8081/h2-console`. Indiquez le nom de la base de données spécifié dans `application.properties`.
 
 ![Console H2](./pictures/affichage.png)
+![](./pictures/affichage1.png)
+
+
+### 3. Documentation de l'API
+Accédez à la documentation Swagger via l'URL : `http://localhost:8081/swagger-ui/index.html`.
+
+![Swagger UI](./pictures/affichage2.png)
+
+## Utilisation
+
+### Endpoints RESTful
+- **GET** tous les comptes : `http://localhost:8081/v3/api-docs`
+  ![](./pictures/get.png)
+   ![](./pictures/postman.png)
+- **POST** un nouveau compte :
+  ![](./pictures/post.png)
+
+Vous pouvez tester ces endpoints à l'aide de Postman.
+### Projection
+pour afficher seulement les attributs ce qu’on veut et pour la recherche on met : `http://localhost:8081/bankAccounts?projection=p1`
+dans ce cas nous voulons seulement afficher `id` et le `type`
+![](./pictures/projection.png)
+si on ajoute une méthode dans le repository et on veut faire la recherche 
+![](./pictures/search.png)
+
+### Utilisation de GraphQL
+1. Accédez à l'interface GraphiQL via `http://localhost:8081/graphiql`.
+2. Testez les requêtes et mutations pour gérer les comptes.
+![](./pictures/graphQl.png)
+![](./pictures/graphQlId.png)
+![](./pictures/mutation.png)
+![](./pictures/definitParametrs.png)
+![](./pictures/affichageCustomer.png)
+
+
+
+
+
 
